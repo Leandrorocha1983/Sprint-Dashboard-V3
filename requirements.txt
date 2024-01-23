@@ -1,3 +1,5 @@
+selenium
+robotframework-pythonlibcore
 robotframework
 robotframework-seleniumlibrary
 robotframework-faker 
