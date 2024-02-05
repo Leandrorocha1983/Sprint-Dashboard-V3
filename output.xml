@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20240205 13:13:27.315" rpa="false" schemaversion="4">
+<suite id="s1" name="Grouplink Overview" source="C:\Sprint-Dashboard-V3\Overview\grouplink_overview.robot">
+<test id="s1-t1" name="Cenário: Exibição da tela Settings - Overview após realização do login com sucesso" line="10">
+<kw name="Abrir o navegador" library="grouplink_overview_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240205 13:13:27.800" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20240205 13:13:27.800" endtime="20240205 13:13:29.091"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240205 13:13:29.091" endtime="20240205 13:13:29.203"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:27.800" endtime="20240205 13:13:29.203"/>
+</kw>
+<kw name="Dado que o usuário esteja autenticado no sistema" library="grouplink_overview_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240205 13:13:29.204" level="INFO">Opening url 'http://gldashboards.newpost.com/login'</msg>
+<status status="PASS" starttime="20240205 13:13:29.204" endtime="20240205 13:13:30.703"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:29.204" endtime="20240205 13:13:30.703"/>
+</kw>
+<kw name="Quando o usuário acessa a barra lateral e clica em Settings" library="grouplink_overview_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[@name='email']</arg>
+<arg>text=qa.energy@grouplinknetwork.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240205 13:13:30.704" level="INFO">Typing text 'qa.energy@grouplinknetwork.com' into text field '//input[@name='email']'.</msg>
+<status status="PASS" starttime="20240205 13:13:30.703" endtime="20240205 13:13:30.870"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>locator=//input[@name='password']</arg>
+<arg>password=fzveqtsdkukz</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240205 13:13:30.871" level="INFO">Typing password into text field '//input[@name='password']'.</msg>
+<msg timestamp="20240205 13:13:30.886" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240205 13:13:30.946" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240205 13:13:30.870" endtime="20240205 13:13:30.946"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=//button[contains(.,'log in')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240205 13:13:30.946" level="INFO">Clicking button '//button[contains(.,'log in')]'.</msg>
+<status status="PASS" starttime="20240205 13:13:30.946" endtime="20240205 13:13:31.015"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>locator=//div[@class='MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-19cinkl'][contains(.,'PL')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240205 13:13:31.015" endtime="20240205 13:13:33.134"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=//button[contains(.,'Settings')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240205 13:13:33.134" level="INFO">Clicking button '//button[contains(.,'Settings')]'.</msg>
+<status status="PASS" starttime="20240205 13:13:33.134" endtime="20240205 13:13:33.226"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:30.703" endtime="20240205 13:13:33.226"/>
+</kw>
+<kw name="Então a tela Settings - Overview é exibida com sucesso" library="grouplink_overview_resources">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>locator=//span[contains(.,'settings &gt; overview')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240205 13:13:33.227" endtime="20240205 13:13:33.234"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//span[contains(.,'Overview')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240205 13:13:33.266" level="INFO">Element '//span[contains(.,'Overview')]' is displayed.</msg>
+<status status="PASS" starttime="20240205 13:13:33.234" endtime="20240205 13:13:33.266"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:33.227" endtime="20240205 13:13:33.266"/>
+</kw>
+<kw name="Fechar o navegador" library="grouplink_overview_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240205 13:13:33.406" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240205 13:13:33.268" endtime="20240205 13:13:33.406"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240205 13:13:33.406" endtime="20240205 13:13:35.601"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:33.268" endtime="20240205 13:13:35.601"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:27.799" endtime="20240205 13:13:35.601"/>
+</test>
+<test id="s1-t2" name="Cenário: Exibição do card &quot;Edit profile&quot; na tela Settings - Overview" line="18">
+<kw name="Abrir o navegador" library="grouplink_overview_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240205 13:13:35.601" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20240205 13:13:35.601" endtime="20240205 13:13:36.832"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240205 13:13:36.832" endtime="20240205 13:13:36.952"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:35.601" endtime="20240205 13:13:36.952"/>
+</kw>
+<kw name="Dado que o usuário esteja autenticado no sistema" library="grouplink_overview_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240205 13:13:36.952" level="INFO">Opening url 'http://gldashboards.newpost.com/login'</msg>
+<status status="PASS" starttime="20240205 13:13:36.952" endtime="20240205 13:13:38.442"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:36.952" endtime="20240205 13:13:38.442"/>
+</kw>
+<kw name="Quando o usuário acessa a barra lateral e clica em Settings" library="grouplink_overview_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[@name='email']</arg>
+<arg>text=qa.energy@grouplinknetwork.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240205 13:13:38.442" level="INFO">Typing text 'qa.energy@grouplinknetwork.com' into text field '//input[@name='email']'.</msg>
+<status status="PASS" starttime="20240205 13:13:38.442" endtime="20240205 13:13:38.601"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>locator=//input[@name='password']</arg>
+<arg>password=fzveqtsdkukz</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240205 13:13:38.601" level="INFO">Typing password into text field '//input[@name='password']'.</msg>
+<msg timestamp="20240205 13:13:38.629" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240205 13:13:38.691" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240205 13:13:38.601" endtime="20240205 13:13:38.691"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=//button[contains(.,'log in')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240205 13:13:38.692" level="INFO">Clicking button '//button[contains(.,'log in')]'.</msg>
+<status status="PASS" starttime="20240205 13:13:38.691" endtime="20240205 13:13:38.752"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>locator=//div[@class='MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-19cinkl'][contains(.,'PL')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240205 13:13:38.752" endtime="20240205 13:13:40.867"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=//button[contains(.,'Settings')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240205 13:13:40.867" level="INFO">Clicking button '//button[contains(.,'Settings')]'.</msg>
+<status status="PASS" starttime="20240205 13:13:40.867" endtime="20240205 13:13:40.977"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:38.442" endtime="20240205 13:13:40.977"/>
+</kw>
+<kw name="Então o card &quot;Edit profile&quot; é exibido na tela Settings - Overview [RN001]" library="grouplink_overview_resources">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//a[contains(.,'Edit profile')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240205 13:13:40.999" level="INFO">Element '//a[contains(.,'Edit profile')]' is displayed.</msg>
+<status status="PASS" starttime="20240205 13:13:40.977" endtime="20240205 13:13:40.999"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//a[contains(.,'Edit profile')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 13:13:40.999" level="INFO">Clicking element '//a[contains(.,'Edit profile')]'.</msg>
+<status status="PASS" starttime="20240205 13:13:40.999" endtime="20240205 13:13:41.092"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-scwdp0']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240205 13:13:41.117" level="INFO">Element '//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-scwdp0']' is displayed.</msg>
+<status status="PASS" starttime="20240205 13:13:41.092" endtime="20240205 13:13:41.117"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//h5[contains(.,'Profile tips')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240205 13:13:41.134" level="INFO">Element '//h5[contains(.,'Profile tips')]' is displayed.</msg>
+<status status="PASS" starttime="20240205 13:13:41.117" endtime="20240205 13:13:41.134"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//button[contains(.,'My Account')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240205 13:13:41.150" level="INFO">Element '//button[contains(.,'My Account')]' is displayed.</msg>
+<status status="PASS" starttime="20240205 13:13:41.134" endtime="20240205 13:13:41.150"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:40.977" endtime="20240205 13:13:41.150"/>
+</kw>
+<kw name="Fechar o navegador" library="grouplink_overview_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240205 13:13:41.278" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240205 13:13:41.152" endtime="20240205 13:13:41.278"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240205 13:13:41.278" endtime="20240205 13:13:43.439"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:41.151" endtime="20240205 13:13:43.439"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:35.601" endtime="20240205 13:13:43.440"/>
+</test>
+<test id="s1-t3" name="Cenário: Exibição das informações de perfil do usuário na tela Settings - Overview" line="25">
+<kw name="Abrir o navegador" library="grouplink_overview_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240205 13:13:43.442" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20240205 13:13:43.442" endtime="20240205 13:13:44.742"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240205 13:13:44.742" endtime="20240205 13:13:44.868"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:43.442" endtime="20240205 13:13:44.868"/>
+</kw>
+<kw name="Dado que o usuário esteja autenticado no sistema" library="grouplink_overview_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240205 13:13:44.869" level="INFO">Opening url 'http://gldashboards.newpost.com/login'</msg>
+<status status="PASS" starttime="20240205 13:13:44.869" endtime="20240205 13:13:46.470"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:44.869" endtime="20240205 13:13:46.470"/>
+</kw>
+<kw name="Quando o usuário acessa a barra lateral e clica em Settings" library="grouplink_overview_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[@name='email']</arg>
+<arg>text=qa.energy@grouplinknetwork.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240205 13:13:46.471" level="INFO">Typing text 'qa.energy@grouplinknetwork.com' into text field '//input[@name='email']'.</msg>
+<status status="PASS" starttime="20240205 13:13:46.471" endtime="20240205 13:13:46.640"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>locator=//input[@name='password']</arg>
+<arg>password=fzveqtsdkukz</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240205 13:13:46.640" level="INFO">Typing password into text field '//input[@name='password']'.</msg>
+<msg timestamp="20240205 13:13:46.668" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240205 13:13:46.722" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240205 13:13:46.640" endtime="20240205 13:13:46.723"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=//button[contains(.,'log in')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240205 13:13:46.723" level="INFO">Clicking button '//button[contains(.,'log in')]'.</msg>
+<status status="PASS" starttime="20240205 13:13:46.723" endtime="20240205 13:13:46.780"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>locator=//div[@class='MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-19cinkl'][contains(.,'PL')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240205 13:13:46.780" endtime="20240205 13:13:48.901"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=//button[contains(.,'Settings')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240205 13:13:48.903" level="INFO">Clicking button '//button[contains(.,'Settings')]'.</msg>
+<status status="PASS" starttime="20240205 13:13:48.901" endtime="20240205 13:13:48.989"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:46.471" endtime="20240205 13:13:48.989"/>
+</kw>
+<kw name="Então o nome completo, e-mail corporativo, cargo, nome da organização e endereço residencial do usuário são exibidos na tela Settings - Overview" library="grouplink_overview_resources">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//span[contains(.,'settings &gt; my account')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240205 13:13:49.137" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-31.png"&gt;&lt;img src="selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240205 13:13:49.139" level="FAIL">Element with locator '//span[contains(.,'settings &gt; my account')]' not found.</msg>
+<status status="FAIL" starttime="20240205 13:13:48.990" endtime="20240205 13:13:49.141"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//h1[contains(.,'My account')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.142" endtime="20240205 13:13:49.142"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//legend[contains(.,'personal info')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.142" endtime="20240205 13:13:49.142"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//label[contains(.,'First name')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.142" endtime="20240205 13:13:49.142"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//label[contains(.,'Last name')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.142" endtime="20240205 13:13:49.142"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//label[contains(.,'Email address')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.142" endtime="20240205 13:13:49.142"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//label[contains(.,'Phone number')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.142" endtime="20240205 13:13:49.142"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//legend[contains(.,'address')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.142" endtime="20240205 13:13:49.142"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//label[contains(.,'Country/region​')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.142" endtime="20240205 13:13:49.142"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//label[contains(.,'Street address')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.142" endtime="20240205 13:13:49.142"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//label[contains(.,'Apt, suite. (optional)')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.142" endtime="20240205 13:13:49.142"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//label[contains(.,'City')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.142" endtime="20240205 13:13:49.142"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//label[contains(.,'State')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.142" endtime="20240205 13:13:49.143"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//label[contains(.,'Zip code')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.143" endtime="20240205 13:13:49.143"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//legend[contains(.,'organization')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.143" endtime="20240205 13:13:49.143"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//label[contains(.,'Job title')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.143" endtime="20240205 13:13:49.143"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//label[contains(.,'Company')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.143" endtime="20240205 13:13:49.143"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//button[contains(.,'update profile')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.143" endtime="20240205 13:13:49.143"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//p[contains(.,'© 2024 Group Link™. All rights reserved')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.143" endtime="20240205 13:13:49.143"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//a[contains(.,'Privacy')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.143" endtime="20240205 13:13:49.143"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//a[contains(.,'Terms')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240205 13:13:49.143" endtime="20240205 13:13:49.143"/>
+</kw>
+<status status="FAIL" starttime="20240205 13:13:48.990" endtime="20240205 13:13:49.143"/>
+</kw>
+<kw name="Fechar o navegador" library="grouplink_overview_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240205 13:13:49.274" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-32.png"&gt;&lt;img src="selenium-screenshot-32.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240205 13:13:49.144" endtime="20240205 13:13:49.274"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240205 13:13:49.274" endtime="20240205 13:13:51.422"/>
+</kw>
+<status status="PASS" starttime="20240205 13:13:49.144" endtime="20240205 13:13:51.423"/>
+</kw>
+<status status="FAIL" starttime="20240205 13:13:43.441" endtime="20240205 13:13:51.423">Element with locator '//span[contains(.,'settings &gt; my account')]' not found.</status>
+</test>
+<doc>Essa suite testa o login da dashboard V3.0.0</doc>
+<status status="FAIL" starttime="20240205 13:13:27.315" endtime="20240205 13:13:51.423"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="Grouplink Overview">Grouplink Overview</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
