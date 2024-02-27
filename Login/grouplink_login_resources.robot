@@ -5,7 +5,7 @@ Library                               FakerLibrary
 
 *** Variables ***
 ${BROWSER}                            chrome
-${URL}                                http://gldashboards.newpost.com/login
+${URL}                                https://dashboard-v3-s.grouplinknetwork.com/
 ${Get Cookies}                        //h5[@class='MuiTypography-root MuiTypography-h5 css-i6vjuv'][contains(.,'accept all cookies')]
 ${DEVICES>OVERVIEW}                   //span[contains(.,'Devices > Overview')]    
 ${First_Name}                         //input[@type='email']
@@ -25,7 +25,7 @@ Dado que estou na tela de Login
 E Clicar no "accept cookies policy"
     Click Element                     locator=${Get Cookies}
 Quando digito um email válido
-    Input Text                        locator=//input[@name='email']    text=qa.water@grouplinknetwork.com
+    Input Text                        locator=//input[@name='email']    text=qa.energy@grouplinknetwork.com
 Então permaneço no campo Email
     Page Should Contain               text=E-mail
 Quando digito a senha cadastrada corretamente

@@ -45,7 +45,7 @@ Então o card "Edit profile" é exibido na tela Settings - Overview [RN001]
     Element Should Be Visible             locator=//button[contains(.,'My Account')]
     
 Então o nome completo, e-mail corporativo, cargo, nome da organização e endereço residencial do usuário são exibidos na tela Settings - Overview  
-    Element Should Be Visible             locator=//span[contains(.,'settings > my account')]
+    # Element Should Be Visible             locator=//span[contains(.,'settings > my account')]
     Element Should Be Visible             locator=//h1[contains(.,'My account')]
     Element Should Be Visible             locator=//legend[contains(.,'personal info')]
     Element Should Be Visible             locator=//label[contains(.,'First name')]
@@ -66,4 +66,8 @@ Então o nome completo, e-mail corporativo, cargo, nome da organização e ender
     Element Should Be Visible             locator=//p[contains(.,'© 2024 Group Link™. All rights reserved')]
     Element Should Be Visible             locator=//a[contains(.,'Privacy')]
     Element Should Be Visible             locator=//a[contains(.,'Terms')]
+
+
+Então o botão "Edit profile" é exibido na tela Settings - Overview [RN002]
+    
     

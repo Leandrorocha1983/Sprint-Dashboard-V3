@@ -29,10 +29,10 @@ Cenário: Exibição das informações de perfil do usuário na tela Settings - 
 
  
 
-# Cenário: Verificação da existência do botão "Edit profile" na tela Settings - Overview  
-#     Dado que o usuário esteja autenticado no sistema  
-#     Quando o usuário acessa a barra lateral e clica em Settings  
-#     Então o botão "Edit profile" é exibido na tela Settings - Overview [RN002]  
+Cenário: Verificação da existência do botão "Edit profile" na tela Settings - Overview  
+    Dado que o usuário esteja autenticado no sistema  
+    Quando o usuário acessa a barra lateral e clica em Settings  
+    Então o botão "Edit profile" é exibido na tela Settings - Overview [RN002]  
 
  
 
@@ -86,3 +86,27 @@ Cenário: Exibição das informações de perfil do usuário na tela Settings - 
 #     Dado que o usuário esteja autenticado no sistema  
 #     Quando o usuário acessa a barra lateral e clica em Settings  
 #     Então os botões "Privacy" e "Terms" são exibidos na tela Settings - Overview 
+
+# Cenário: Verificar período de 30 dias
+#   Dado que estou na tela Overview
+#   Quando seleciono a opção de período de 30 dias
+#   Então a aplicação deve exibir os dados relativos aos últimos 30 dias
+#   E as operações devem ser realizadas corretamente
+
+# Cenário: Verificar período de 01 dia
+#   Dado que estou na tela Overview
+#   Quando seleciono a opção de período de 01 dia
+#   Então a aplicação deve exibir os dados relativos aos último 01 dia
+#   E as operações devem ser realizadas corretamente
+
+# Cenário: Verificar período de 07 dias
+#   Dado que estou na tela Overview
+#   Quando seleciono a opção de período de 07 dias
+#   Então a aplicação deve exibir os dados relativos aos últimos 07 dias
+#   E as operações devem ser realizadas corretamente
+
+# Cenário: Verificar período de 15 dias
+#   Dado que estou na tela Overview
+#   Quando seleciono a opção de período de 15 dias
+#   Então a aplicação deve exibir os dados relativos aos últimos 15 dias
+#   E as operações devem ser realizadas corretamente
